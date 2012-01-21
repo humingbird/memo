@@ -12,7 +12,7 @@
 				}
 				div.main-menu{
 					width: 100%;
-					height: 30%;
+					height: 5%;
 					background-color: #ff0000;
 				}
 				div.main-content{
@@ -23,7 +23,20 @@
 		<body>
 			<div class="main">
 				<div class="main-menu">めにゅう</div>
-				<div class="main-content">ないよう</div>
+				<div class="main-content">
+					<form method="POST" action="">
+						<div>
+							単語の名前： <input type="text" name="title">
+						</div>
+						<div>
+							内容：<br />
+							<textarea name="description" cols="60" rows= "10"></textarea>
+						</div>
+						<div>
+							<input type="submit" value="投稿"/>
+						</div>
+					</form>
+				</div>
 			</div>
 		</body>
 </html>
