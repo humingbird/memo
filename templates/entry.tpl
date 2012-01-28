@@ -1,42 +1,22 @@
 <html>
-	<head>
-		<title>編集画面</title>
-		<style type="text/css">
-			<!--
-				body{
-					margin:0 auto ; 
-					width:auto;
-				}
-				div.main{
-					width: 100%;
-				}
-				div.main-menu{
-					width: 100%;
-					height: 5%;
-					background-color: #ff0000;
-				}
-				div.main-content{
-					width: 100%;
-				}
-		</style>
-	</head>
-		<body>
-			<div class="main">
-				<div class="main-menu">めにゅう</div>
-				<div class="main-content">
-					<form method="POST" action="">
-						<div>
-							単語の名前： <input type="text" name="title">
-						</div>
-						<div>
-							内容：<br />
-							<textarea name="description" cols="60" rows= "10"></textarea>
-						</div>
-						<div>
-							<input type="submit" value="投稿"/>
-						</div>
-					</form>
-				</div>
-			</div>
-		</body>
+<head>
+<title>編集画面</title>
+</head>
+<body>
+<!-- メニュー部分 -->
+{include file='memo.header.tpl'}
+<!-- ここまで -->
+<!-- 編集画面 -->
+<form method="POST" action="entry.php">
+	<div class="form_name">単語名:
+		<input type="text" name="word_name">
+	</div>
+	<div class=form_description">説明:<br>
+		<textarea  cols="40" rows="6" wrap="off" name="word_description"></textarea>
+	</div>
+	<div class="form_submit">
+		<input type="submit" value="登録">
+	</div>
+</form>
+</body>
 </html>
