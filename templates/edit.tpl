@@ -10,7 +10,7 @@
 	<div class=edit_title>
 		{$v.title}
 	</div>
-	<form method="POST" action="http://localhost/work/memo/controller/edit.php/regist/{$v.id}">
+	<form method="POST" action="{$home}controller/edit.php/regist/{$v.id}">
 	<div class=form_id>
 		ID:<input type='text' name='id' value='{$v.id}' readonly>
 	</div>
