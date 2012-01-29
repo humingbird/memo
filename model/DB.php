@@ -17,7 +17,7 @@ class DB{
 			if($dbh == null){
 				print('接続に失敗しました');
 			}else{
-				print('接続に成功しました');
+				//print('接続に成功しました');
 			}
 		}catch (PDOException $e){
     			print('Connection failed:'.$e->getMessage());
@@ -34,6 +34,14 @@ class DB{
 		
 		return $stmt;
 	}
+	
+	public function fetch($stmt){
+		while($values=$stmt->fetch(PDO::FETCH_ASSOC)){
+			$result[] = $values;
+		}
+		return $result;
+	}
+
 	
 }
 
