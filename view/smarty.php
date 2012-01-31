@@ -1,6 +1,11 @@
 <?php
 require_once 'Smarty.class.php';
-require_once '../conf/smarty.conf.php';
+
+if($_SERVER['PHP_SELF'] == '/work/memo/index.php'){
+	require_once('conf/smarty.conf.php');
+}else{
+	require_once '../conf/smarty.conf.php';
+}
 
 function setSmarty(){
 	$smarty = new Smarty;
